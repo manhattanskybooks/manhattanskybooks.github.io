@@ -138,6 +138,11 @@
   .author .cornerstone { color: var(--gold-2); font-weight: 500; }
   .social { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; }
   @media (min-width: 680px) { .author .wrap { grid-template-columns: 150px 1fr; gap: 40px; } }
+  .social { gap: 14px; align-items: center; }
+  .social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; color: var(--gold); transition: color .2s, border-color .2s; }
+  .social a:hover, .social a:focus-visible { color: var(--gold-2); border-color: var(--gold); text-decoration: none; }
+  .social svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
   /* Footer / imprint */
   footer { border-top: 1px solid var(--line); padding-block: 44px 56px; }
@@ -262,11 +267,11 @@
         <p class="eyebrow" style="margin-top:12px">Where it came from</p>
         <p>For decades his work took him to the big cities, and inside their towers. He spent a lot of time in those buildings, usually with access to one floor or two, and never the rest. In every city he noticed the same thing: a tower with a single name across the top, thousands of people walking past it and through it every morning without a second look, and nobody asking what was on the floors they couldn't reach. Then a second question found him. Some of the most trusted companies in the world began a century ago as a few men, a wagon and a cellar, delivering goods in a way that couldn't possibly have paid. So what else were they carrying? <em>The Cathedral</em> is what happened when the two questions met.</p>
         <div class="social">
-          <a href="https://www.instagram.com/jcarterhuntwrites/" rel="me">Instagram</a>
-          <a href="https://www.facebook.com/jcarterhuntwrites" rel="me">Facebook</a>
-          <a href="https://www.youtube.com/@jcarterhuntwrites" rel="me">YouTube</a>
-          <a href="https://www.tiktok.com/@jcarterhuntwrites" rel="me">TikTok</a>
-          <a href="https://x.com/jcarterhuntnv" rel="me">X</a>
+          <a href="https://www.instagram.com/jcarterhuntwrites/" rel="me" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"/></svg><span class="sr">Instagram</span></a>
+          <a href="https://www.facebook.com/jcarterhuntwrites" rel="me" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H9.2v3h2.5V21"/></svg><span class="sr">Facebook</span></a>
+          <a href="https://www.youtube.com/@jcarterhuntwrites" rel="me" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg><span class="sr">YouTube</span></a>
+          <a href="https://www.tiktok.com/@jcarterhuntwrites" rel="me" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 3v11.6a3.6 3.6 0 1 1-3.6-3.6"/><path d="M13.5 3c.4 2.6 2.2 4.4 4.9 4.6"/></svg><span class="sr">TikTok</span></a>
+          <a href="https://x.com/jcarterhuntnv" rel="me" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4h4.2l10.8 16h-4.2z"/><path d="M19.2 4l-6.1 6.9M10.9 13.1 4.8 20"/></svg><span class="sr">X</span></a>
         </div>
       </div>
     </div>
