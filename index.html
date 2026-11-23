@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>J. Carter Hunt — THE CATHEDRAL</title>
+<meta name="description" content="THE CATHEDRAL, the first novel by J. Carter Hunt. On the Seventh Day, Book One. 110 stories. Four of them are lying. April 6, 2027.">
+<link rel="canonical" href="https://manhattanskybooks.com/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<meta property="og:type" content="book">
+<meta property="og:title" content="THE CATHEDRAL — J. Carter Hunt">
+<meta property="og:description" content="110 stories. Four of them are lying. On the Seventh Day, Book One. April 6, 2027.">
+<meta property="og:image" content="https://manhattanskybooks.com/assets/og-cathedral.jpg">
+<meta property="og:url" content="https://manhattanskybooks.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a single tall column on a black ground; the cover sits beside the title on wide screens and above it on phones.
+     The palette is the cover's own: black glass, sunset gold, cream type. */
+  :root {
+    --bg: #0e0e10;
+    --bg-2: #161619;
+    --fg: #f1ece0;
+    --muted: #a7a195;
+    --line: #2a2a2f;
+    --gold: #d4a44c;
+    --gold-2: #f0d39a;
+    --display: "Bebas Neue", "Oswald", Impact, "Arial Narrow", sans-serif;
+    --body: "Inter", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--gold-2); text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 0.95; margin: 0; text-wrap: balance; letter-spacing: 0.01em; }
+  h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+  p { margin: 0; }
+  .lede { font-size: 1.15rem; color: var(--fg); max-width: 36em; }
+  .muted { color: var(--muted); }
+  .rule { border: 0; border-top: 1px solid var(--line); margin: 0; }
+
+  /* Header */
+  header.top { border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--fg); }
+  .brand img { width: 40px; height: 40px; }
+  .brand span { font-family: var(--display); font-size: 1.5rem; letter-spacing: 0.08em; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
+  nav a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  nav a:hover { color: var(--fg); text-decoration: none; }
+
+  /* Hero */
+  .hero .wrap { display: grid; grid-template-columns: 1fr; gap: 36px; padding-block: 48px 56px; align-items: center; }
+  .hero-text { display: grid; gap: 20px; min-width: 0; }
+  .hero h1 { font-size: clamp(4.2rem, 12vw, 8.5rem); color: var(--fg); }
+  .tagline { font-family: var(--body); font-weight: 600; font-size: clamp(1.05rem, 2.4vw, 1.4rem); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-2); }
+  .release { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; font-size: 0.95rem; }
+  .release strong { font-weight: 600; color: var(--fg); font-variant-numeric: tabular-nums; }
+  .cover { margin: 0 auto; width: min(100%, 420px); }
+  .cover img { border-radius: 4px; box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 0 1px var(--line); }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 13px 22px; border-radius: 3px;
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    border: 1px solid var(--gold); color: var(--gold-2); background: transparent;
+    cursor: pointer; font-family: var(--body);
+  }
+  .btn.primary { background: var(--gold); color: #141210; }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  @media (min-width: 820px) {
+    .hero .wrap { grid-template-columns: 1.15fr 0.85fr; gap: 56px; padding-block: 72px 80px; }
+    .cover { width: 100%; max-width: 440px; margin-left: auto; }
+  }
+
+  /* Sections */
+  section { padding-block: 64px; }
+  section + section { border-top: 1px solid var(--line); }
+  .section-head { display: grid; gap: 10px; margin-bottom: 28px; }
+  .blurb { display: grid; gap: 18px; max-width: 40em; }
+  .blurb p { color: var(--fg); }
+  .blurb .spoiled { font-family: var(--display); font-size: 2rem; letter-spacing: 0.1em; color: var(--gold); line-height: 1; }
+  .blurb .close { color: var(--gold-2); font-weight: 500; }
+
+  .books { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .book { display: grid; gap: 8px; padding: 24px; background: var(--bg-2); min-width: 0; }
+  .book .num { font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+  .book h3 { font-size: 2rem; }
+  .book .meta { font-size: 0.9rem; color: var(--muted); }
+  .book.next h3 { color: var(--muted); }
+  @media (min-width: 680px) { .books { grid-template-columns: repeat(2, 1fr); } }
+
+  /* Sign-up */
+  .signup { background: var(--bg-2); }
+  .signup .wrap { display: grid; gap: 28px; }
+  .signup form { display: grid; gap: 12px; max-width: 520px; }
+  .signup label { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .signup input[type="email"] {
+    width: 100%; padding: 14px 16px; font: inherit; color: var(--fg);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 3px;
+  }
+  .signup input[type="email"]:focus { border-color: var(--gold); outline: none; }
+  .signup .fine { font-size: 0.82rem; color: var(--muted); max-width: 36em; }
+  .signup .thanks { color: var(--gold-2); font-weight: 500; }
+  @media (min-width: 820px) { .signup .wrap { grid-template-columns: 1fr 1fr; align-items: start; } }
+
+  /* Author */
+  .author .wrap { display: grid; gap: 28px; align-items: start; }
+  .author .seal { width: 150px; }
+  .author .bio { display: grid; gap: 16px; max-width: 38em; }
+  .author .cornerstone { color: var(--gold-2); font-weight: 500; }
+  .social { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; }
+  @media (min-width: 680px) { .author .wrap { grid-template-columns: 150px 1fr; gap: 40px; } }
+
+  /* Footer / imprint */
+  footer { border-top: 1px solid var(--line); padding-block: 44px 56px; }
+  footer .wrap { display: grid; gap: 24px; align-items: center; }
+  footer .imprint { width: 160px; }
+  footer p { font-size: 0.9rem; color: var(--muted); max-width: 40em; }
+  footer small { display: block; font-size: 0.76rem; color: var(--muted); letter-spacing: 0.06em; }
+  @media (min-width: 680px) { footer .wrap { grid-template-columns: 160px 1fr; gap: 36px; } }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .cover img { transition: transform 0.6s ease; }
+    .cover:hover img { transform: translateY(-4px); }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="J. Carter Hunt, home">
+      <img src="/assets/jch-seal-gold.png" alt="" width="40" height="40">
+      <span>J. Carter Hunt</span>
+    </a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#book">The Book</a></li>
+        <li><a href="#series">The Series</a></li>
+        <li><a href="#author">Author</a></li>
+        <li><a href="#list">Sign up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="eyebrow">On the Seventh Day · Book One</p>
+        <h1>The Cathedral</h1>
+        <p class="tagline">110 stories. Four of them are lying.</p>
+        <p class="lede">Sixty thousand people walk through the lobby every day. Four of its floors aren't on any plan. Nobody looks up. Somebody should.</p>
+        <p class="release"><span class="muted">A novel by J. Carter Hunt</span> <strong>April 6, 2027</strong></p>
+        <div class="actions">
+          <a class="btn primary" href="#list">Get first word</a>
+          <a class="btn" href="#book">Read the back cover</a>
+        </div>
+      </div>
+      <div class="cover">
+        <img src="/assets/cathedral-cover.jpg" width="900" height="1437" alt="The cover of The Cathedral: a black-glass tower lit floor to floor at dusk, two small figures walking toward its entrance.">
+      </div>
+    </div>
+  </div>
+
+  <section id="book">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The book</p>
+        <h2>Sunday, 7:00 a.m.</h2>
+      </div>
+      <div class="blurb">
+        <p>A pill on a stranger's nightstand pulls a fixer for New York's wealthiest families into the hundred-and-ten-story tower where he works, and into the business his employers have been running on Sundays since 1903.</p>
+        <p>In November 1903, on a pier where the Cathedral now stands, Cormac Kane wrote forty-one names in a ledger and put the same word beside every one of them.</p>
+        <p class="spoiled">Spoiled.</p>
+        <p>Sunday, 7:00 a.m. A hundred and twenty-three years later, the Cathedral seals itself, every shutter, every fire curtain, every damper, with two people inside who were never meant to be there.</p>
+        <p>Dominique Silva is an engineer who asked one question about four floors drawing power they shouldn't.</p>
+        <p>Marcus Reed is the fixer the family sends when a question like that needs to go away. Eleven years of making rich people's disasters vanish. This morning he learned his own brother was one of them.</p>
+        <p>They have sixty-four minutes before a solvent fire takes out four floors and every piece of evidence on them. A hundred stories of locked stairwell between them and the room where it gets triggered. Four teams in the well, coming down.</p>
+        <p class="close">Nobody is coming for them. The Commissioner of Police locked the doors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="series">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The series</p>
+        <h2>On the Seventh Day</h2>
+        <p class="lede muted">Companies that began as something else, and only look clean now. One tower at a time.</p>
+      </div>
+      <div class="books">
+        <article class="book">
+          <p class="num">Book One</p>
+          <h3>The Cathedral</h3>
+          <p class="meta">New York · April 6, 2027</p>
+        </article>
+        <article class="book next">
+          <p class="num">Book Two</p>
+          <h3>Made Ground</h3>
+          <p class="meta">Sydney · in progress</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="list" class="signup">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow">The list</p>
+        <h2>Nobody looks up.<br>Be the first who does.</h2>
+        <p class="lede muted">One email when the pre-order opens, one on release day, and the 1903 story before anyone else sees it. Nothing else.</p>
+      </div>
+      <!-- MAILERLITE: replace this form with the MailerLite embed, or set action to the MailerLite form URL. -->
+      <form id="signup-form" method="post" action="#" novalidate>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+        <div class="actions"><button class="btn primary" type="submit">Join the list</button></div>
+        <p class="fine">No spam, no sharing, one click to leave. Published by Manhattansky Books.</p>
+        <p class="thanks" id="thanks" hidden>You're on the list. Look up.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="author" class="author">
+    <div class="wrap">
+      <img class="seal" src="/assets/jch-seal-gold.png" width="150" height="150" alt="The JCH author seal, a gold seven-sided frame.">
+      <div class="bio">
+        <p class="eyebrow">The author</p>
+        <h2>J. Carter Hunt</h2>
+        <p>J. Carter Hunt grew up outside Detroit, where he made his living as a musician. He moved west and built a second career in business. He writes crime fiction now, from the Nevada desert.</p>
+        <p class="cornerstone">The Cathedral is his first novel, and the cornerstone of more to come.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/jcarterhuntwrites/" rel="me">Instagram</a>
+          <a href="https://www.facebook.com/jcarterhuntwrites" rel="me">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="imprint" src="/assets/manhattansky-stacked-gold.png" width="160" height="128" alt="Manhattansky Books">
+    <div>
+      <p>Manhattansky Books is an independent imprint in the Nevada desert. <em>The Cathedral</em> is its first title.</p>
+      <small>© 2026 Manhattansky Books. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sign-up form: handled in page until the MailerLite form is wired in.
+  document.getElementById('signup-form').addEventListener('submit', function (e) {
+    var form = e.target;
+    if (form.getAttribute('action') === '#') {
+      e.preventDefault();
+      var email = document.getElementById('email');
+      if (!email.checkValidity()) { email.reportValidity(); return; }
+      document.getElementById('thanks').hidden = false;
+      email.value = '';
+    }
+  });
+</script>
+</body>
+</html>
