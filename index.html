@@ -128,7 +128,13 @@
   }
   .signup input[type="email"]:focus { border-color: var(--gold); outline: none; }
   .signup .fine { font-size: 0.82rem; color: var(--muted); max-width: 36em; }
-  .signup .thanks { color: var(--gold-2); font-weight: 500; }
+  .signup .thanks { color: var(--gold-2); font-weight: 500; font-size: 1.15rem; }
+  .signup .ml-block-form { display: grid; gap: 12px; max-width: 520px; }
+  .signup .ml-field-group { display: grid; gap: 12px; }
+  .signup .ml-form-recaptcha { min-height: 78px; }
+  .signup .ml-error input { border-color: #c0533f !important; }
+  .signup .ml-error label { color: #e08a78; }
+  .signup .row-success { display: grid; gap: 8px; }
   @media (min-width: 820px) { .signup .wrap { grid-template-columns: 1fr 1fr; align-items: start; } }
 
   /* Author */
@@ -243,16 +249,39 @@
       <div class="section-head" style="margin-bottom:0">
         <p class="eyebrow">The list</p>
         <h2>Nobody looks up.<br>Be the first who does.</h2>
-        <p class="lede muted">One email when the pre-order opens, one on release day, and the 1903 story before anyone else sees it. Nothing else.</p>
+        <p class="lede muted">One email when the pre-order opens, one on release day, and a free story from the Cathedral's past before anyone else sees it. Nothing else.</p>
       </div>
-      <!-- MAILERLITE: replace this form with the MailerLite embed, or set action to the MailerLite form URL. -->
-      <form id="signup-form" method="post" action="#" novalidate>
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
-        <div class="actions"><button class="btn primary" type="submit">Join the list</button></div>
-        <p class="fine">No spam, no sharing, one click to leave. Published by Manhattansky Books.</p>
-        <p class="thanks" id="thanks" hidden>You're on the list. Look up.</p>
-      </form>
+      <!-- MailerLite embedded form 48913483 (group: website sign-up). Class names are MailerLite's and must stay. -->
+      <div id="mlb2-48913483" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-48913483">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+            <form class="ml-block-form" id="signup-form" action="https://assets.mailerlite.com/jsonp/2817464/forms/204907311729214963/subscribe" data-code="" method="post" target="_blank">
+              <div class="ml-form-formContent">
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <label for="email">Email address</label>
+                    <input id="email" aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="you@example.com" autocomplete="email">
+                  </div>
+                </div>
+              </div>
+              <div class="ml-form-recaptcha ml-validate-required">
+                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD" data-theme="dark"></div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <div class="ml-form-embedSubmit actions">
+                <button type="submit" class="primary btn">Join the list</button>
+                <button disabled="disabled" style="display: none;" type="button" class="loading btn">Joining…</button>
+              </div>
+              <input type="hidden" name="anticsrf" value="true">
+              <p class="fine">No spam, no sharing, one click to leave. Published by Manhattansky Books.</p>
+            </form>
+          </div>
+          <div class="ml-form-successBody row-success" style="display: none">
+            <p class="thanks">You're on the list. Look up.</p>
+            <p class="fine">Check your inbox to confirm.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -289,17 +318,14 @@
 </footer>
 
 <script>
-  // Sign-up form: handled in page until the MailerLite form is wired in.
-  document.getElementById('signup-form').addEventListener('submit', function (e) {
-    var form = e.target;
-    if (form.getAttribute('action') === '#') {
-      e.preventDefault();
-      var email = document.getElementById('email');
-      if (!email.checkValidity()) { email.reportValidity(); return; }
-      document.getElementById('thanks').hidden = false;
-      email.value = '';
-    }
-  });
+  function ml_webform_success_48913483() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-48913483 .row-success').show();
+    $('.ml-subscribe-form-48913483 .row-form').hide();
+  }
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+<script>fetch("https://assets.mailerlite.com/jsonp/2817464/forms/204907311729214963/takel")</script>
 </body>
 </html>
